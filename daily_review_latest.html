@@ -50,7 +50,7 @@ table.custom {
 <body>
 
 <div class="daily-review-saved">
-    Snapshot saved: 2026-11-17 21:37:29 UTC
+    Snapshot saved: 2026-11-17 21:53:01 UTC
 </div>
 
 <div class="daily-review-top">
@@ -68,7 +68,7 @@ table.custom {
             &nbsp;|&nbsp;
             Session start: 15:42:04 UTC
             &nbsp;|&nbsp;
-            Duration: 5h52m
+            Duration: 5h50m
         </div>
 
         
@@ -186,7 +186,7 @@ table.custom {
                     32
                 </div>
                 <div style="font-size:36%; margin-top:4px; line-height:1.15; white-space:nowrap;">
-                    MRS = 4.4 NM
+                    G2: 28RAR/5.0MRS<br>G1: 4RAR/35.0MRS
                 </div>
             </div>
 
@@ -610,7 +610,7 @@ table.custom {
             ">
                 <span>TFMS demand vs Measured arrivals</span>
                 <span style="font-weight:normal;">
-                    TFMS reconcile: +8 / −14
+                    TFMS reconcile: +9 / −16
                 </span>
             </div>
 
@@ -1555,8 +1555,16 @@ table.custom {
                         fill="rgba(46,125,50,0.70)"
                     />
                     
+                    <rect
+                        x="518.9"
+                        y="216.0"
+                        width="9.4"
+                        height="192.0"
+                        fill="rgba(46,125,50,0.70)"
+                    />
+                    
                 <path
-                    d="M 42.3 120.0 H 440.2 V 152.0 H 490.7 V 152.0 H 509.0"
+                    d="M 42.3 120.0 H 440.2 V 152.0 H 490.7 V 152.0 H 526.3 V 152.0 H 529.4"
                     fill="none"
                     stroke="#111111"
                     stroke-width="2.5"
@@ -1569,40 +1577,55 @@ table.custom {
             
         <div style="
             display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:14px;
+            grid-template-columns:1fr 1px 1fr;
+            column-gap:7px;
             margin-top:4px;
             padding-top:4px;
             border-top:1px solid rgba(11,79,108,0.22);
             font-size:48%;
         ">
             <div>
-                <div style="font-weight:bold; margin-bottom:2px;">
+                <div style="
+                    font-size:9px;
+                    font-weight:bold;
+                    margin-bottom:2px;
+                    white-space:nowrap;
+                ">
                     Live Tracked Arrivals — No Matching TFMS
                 </div>
                 <div style="
                     display:grid;
-                    grid-template-columns:1fr 72px;
+                    grid-template-columns:auto auto;
                     column-gap:6px;
                 ">
-                    <div style="font-weight:bold;">ACID</div>
-                    <div style="font-weight:bold;">Arrival UTC</div>
-                    <div>ASP875</div><div>—</div><div>N228GA</div><div>—</div><div>N100Y</div><div>—</div><div>CGKLK741</div><div>—</div><div>N83CW</div><div>—</div><div>CFPCP</div><div>—</div><div>N515HJ</div><div>—</div><div>ACA141</div><div>—</div>
+                    <div style="font-weight:bold; text-align:right;">UTC</div>
+                    <div style="font-weight:bold; text-align:left;">ACID</div>
+                    <div style='text-align:right;'>21:25</div><div style='text-align:left;'>CFTOQ</div><div style='text-align:right;'>—</div><div style='text-align:left;'>ASP875</div><div style='text-align:right;'>—</div><div style='text-align:left;'>N228GA</div><div style='text-align:right;'>—</div><div style='text-align:left;'>N100Y</div><div style='text-align:right;'>—</div><div style='text-align:left;'>CGKLK741</div><div style='text-align:right;'>—</div><div style='text-align:left;'>N83CW</div><div style='text-align:right;'>—</div><div style='text-align:left;'>CFPCP</div><div style='text-align:right;'>—</div><div style='text-align:left;'>N515HJ</div><div style='text-align:right;'>—</div><div style='text-align:left;'>ACA141</div>
                 </div>
             </div>
 
+            <div style="
+                background:rgba(11,79,108,0.35);
+                width:1px;
+            "></div>
+
             <div>
-                <div style="font-weight:bold; margin-bottom:2px;">
+                <div style="
+                    font-size:9px;
+                    font-weight:bold;
+                    margin-bottom:2px;
+                    white-space:nowrap;
+                ">
                     TFMS Predicted Arrivals — No Matching Live Arrival
                 </div>
                 <div style="
                     display:grid;
-                    grid-template-columns:1fr 72px;
+                    grid-template-columns:auto auto;
                     column-gap:6px;
                 ">
-                    <div style="font-weight:bold;">ACID</div>
-                    <div style="font-weight:bold;">Bin UTC</div>
-                    <div>CLX46C</div><div>15:30</div><div>WJA4023</div><div>15:30</div><div>WJA627</div><div>15:30</div><div>KBA174T</div><div>15:30</div><div>MAL8058</div><div>15:30</div><div>WEN3606</div><div>15:30</div><div>WEN3676</div><div>15:30</div><div>WJA231</div><div>15:30</div><div>AKT1701</div><div>15:45</div><div>ASP875</div><div>17:30</div><div>XXXXXXX</div><div>17:45</div><div>CRN300</div><div>19:30</div><div>ARQ317</div><div>20:30</div><div>WEN3740</div><div>21:00</div>
+                    <div style="font-weight:bold; text-align:right;">UTC</div>
+                    <div style="font-weight:bold; text-align:left;">ACID</div>
+                    <div style='text-align:right;'>15:30</div><div style='text-align:left;'>CLX46C</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>WJA4023</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>WJA627</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>KBA174T</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>MAL8058</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>WEN3606</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>WEN3676</div><div style='text-align:right;'>15:30</div><div style='text-align:left;'>WJA231</div><div style='text-align:right;'>15:45</div><div style='text-align:left;'>AKT1701</div><div style='text-align:right;'>17:30</div><div style='text-align:left;'>ASP875</div><div style='text-align:right;'>17:45</div><div style='text-align:left;'>XXXXXXX</div><div style='text-align:right;'>19:30</div><div style='text-align:left;'>CRN300</div><div style='text-align:right;'>20:30</div><div style='text-align:left;'>ARQ317</div><div style='text-align:right;'>21:00</div><div style='text-align:left;'>WEN3740</div><div style='text-align:right;'>21:15</div><div style='text-align:left;'>WEN3740</div><div style='text-align:right;'>21:15</div><div style='text-align:left;'>ARQ178</div>
                 </div>
             </div>
         </div>
@@ -1663,7 +1686,7 @@ table.custom {
             IDLE - need 2 valid arrivals
           </div>
 
-          <div class='sub'> Params: AMAN MRS = 5NM | reset gap = 240s | speed = 140 kts | avg window = 2 arrivals | tracking window = #2 | runway = —</div>
+          <div class='sub'> Params: AMAN MRS = 5NM | reset gap = 240s | speed = 140 kts | avg window = 2 arrivals | tracking window = #1 | runway = —</div>
 
         </div>
         
@@ -3693,16 +3716,16 @@ table.custom {
             >6</text>
             
                 <rect
-                    x="398.5"
+                    x="400.5"
                     y="522.9"
-                    width="28.0"
+                    width="26.0"
                     height="13.5"
                     fill="#1565c0"
                     opacity="0.32"
                 />
                 
             <text
-                x="400.5"
+                x="402.5"
                 y="529.6"
                 text-anchor="start"
                 dominant-baseline="middle"
@@ -3713,7 +3736,7 @@ table.custom {
                 stroke="#f7f8fa"
                 stroke-width="2.6"
                 paint-order="stroke fill"
-            >14</text>
+            >13</text>
             
                 <rect
                     x="420.5"

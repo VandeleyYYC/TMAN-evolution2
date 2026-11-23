@@ -252,6 +252,55 @@ td {
     ).textContent =
         monthNames[month - 1] + " " + year;
 
+    // Nov22 - sum published daily delay-cost values for the month
+    // currently displayed by the shared calendar.
+    const delayCostByDate =
+        index.delay_cost || {};
+
+    const monthPrefix =
+        String(year).padStart(4, "0") + "-" +
+        String(month).padStart(2, "0") + "-";
+
+    let monthlyDelayCost = 0;
+    let monthlyDelayCostDays = 0;
+
+    for (const [dateKey, delayCost] of Object.entries(
+        delayCostByDate
+    )) {
+        if (!dateKey.startsWith(monthPrefix)) {
+            continue;
+        }
+
+        const numericDelayCost = Number(delayCost);
+
+        if (!Number.isFinite(numericDelayCost)) {
+            continue;
+        }
+
+        monthlyDelayCost += numericDelayCost;
+        monthlyDelayCostDays++;
+    }
+
+    document.getElementById(
+        "monthly-delay-cost"
+    ).textContent =
+        monthlyDelayCostDays > 0
+            ? (
+                monthNames[month - 1] +
+                " delay cost: $" +
+                monthlyDelayCost.toLocaleString(
+                    "en-CA",
+                    {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    }
+                )
+            )
+            : (
+                monthNames[month - 1] +
+                " delay cost: —"
+            );
+
     // Oct31 - preserve the existing view= date while changing only
     // the month displayed inside the shared calendar iframe.
     function browseMonth(offset) {
